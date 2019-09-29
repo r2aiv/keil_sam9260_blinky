@@ -1,0 +1,7 @@
+--cpu ARM926EJ-S
+".\int_ram\sam9260.o"
+".\int_ram\blinky.o"
+--library_type=microlib --strict --scatter ".\Int_RAM\Blinky.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Int_RAM\Blinky.map" -o .\Int_RAM\Blinky.axf
